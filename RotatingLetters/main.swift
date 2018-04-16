@@ -1,10 +1,3 @@
-//
-//  main.swift
-//  RotatingLetters
-//
-//  Created by Gordon, Russell on 2018-04-06.
-//  Copyright © 2018 Gordon, Russell. All rights reserved.
-//
 
 import Foundation
 
@@ -58,7 +51,35 @@ prompt: while 1 == 1 {
 }
 
 // PROCESS
+// Now we have valid input that can be processed according tp
+// the remaining requirements of the scenario
 print(validInput)
+var countOfGoodLetters = 0
+for letter in validInput {
+    
+    // Check each letter to make sure its IHOSZXN
+    print(letter)
+    if letter == "I" || letter == "O" || letter == "H" || letter == "S" || letter == "X" || letter == "N"  {
+    
+    // Good - keep checking (continue the loop)
+        countOfGoodLetters += 1
+        continue
+ 
+        }
+    
+}
+
+// OUTPUT
+// If we got here, guaranteed this is a word with only acceptable letters
+if countOfGoodLetters == validInput.count {
+    print("YES")
+} else {
+    print("NO")
+}
+
+
+
+
 
 
 
